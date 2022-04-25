@@ -1,3 +1,5 @@
+import { render, screen } from "@testing-library/react"
+import Profile from "../../components/Profile/Profile"
 
 const user = {
   id: 1,
@@ -10,6 +12,8 @@ const user = {
   color: 'crimson',
 }
 
-test('Should render the user profile', () => {
+test('Should render the user profile', async () => {
+render
+
 
 })
