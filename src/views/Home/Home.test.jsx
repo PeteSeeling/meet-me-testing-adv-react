@@ -30,14 +30,15 @@ test('Should test that the motto is displayed', async () => {
       test('Should test that the header image is present', () => {
         render(<Header />)
         
-        const headerAltText=  screen.getByAltText('Alchemy Logo');
-        // add arira label text
-        const headerAriaText=  screen.getByLabelText('');
+        const headerAltText =  screen.getByAltText('Alchemy Logo');
         })
 
-        test('Should test a list of user likes', () => {
-          render(<Header />)
-          
-          const headerAltText=  screen.getByAltText('Alchemy Logo');
-          })
+        // test('Should return an index of 6 for the interests')
+        //   render(<Profile />)
+
+        //   const list = screen.getAllByRole('list')
+        // get by allbyrole list item
+        // findAllbyrole list item
+        // expect item.length to equal 6
+
 
