@@ -13,15 +13,16 @@ it('Should check the alt text for image in header', async () => {
     );
 
 const headerAltText = screen.getAllByAltText('Alchemy Logo')
-
 })
+
+test('Should check that name is present in header', async () => {
+    render(<Header />)
+    
+    const selectElement = screen.findByText('Vonta')
+    
+    return selectElement
+    
+    
+    })
 })
-// test('Should check that name is present in header', async () => {
-// render(<Header />)
 
-// const selectElement = screen.findByText('Vonta')
-
-// return selectElement
-
-
-// })
