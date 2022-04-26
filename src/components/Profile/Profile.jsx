@@ -1,7 +1,18 @@
-import LikeList from '../LikeList/LikeList'
+import LikeList from '../LikeList/LikeList';
+
+
 
 export default function Profile({ user }) {
-  const { name, avatar, likes, motto, color, header } = user
+  const { name, avatar, likes, motto, color, header } = user || {
+    id: 1,
+    created_at: '2021-12-13T00:17:29+00:00',
+    name: 'Vonta',
+    avatar: 'https://thumbs.gfycat.com/NiceRequiredGrunion-size_restricted.gif',
+    header: 'https://static.wikia.nocookie.net/naruto/images/5/50/Team_Kakashi.png',
+    likes: ['React', 'Anime', 'Traveling', 'Living', 'Tower Defense Games', 'Card Games'],
+    motto: 'Res Non Verba',
+    color: 'crimson',
+  }
   return (
     <div className="bg-gray-100 bg-opacity-95 my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
       <div className="relative h-40">

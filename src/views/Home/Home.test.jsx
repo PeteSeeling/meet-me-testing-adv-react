@@ -1,15 +1,44 @@
+import { render, screen } from "@testing-library/react";
+import Header from "../../components/layout/Header";
+import Profile from "../../components/Profile/Profile";
 
-const user = {
-  id: 1,
-  created_at: '2021-12-13T00:17:29+00:00',
-  name: 'Vonta',
-  avatar: 'https://thumbs.gfycat.com/NiceRequiredGrunion-size_restricted.gif',
-  header: 'https://static.wikia.nocookie.net/naruto/images/5/50/Team_Kakashi.png',
-  likes: ['React', 'Anime', 'Traveling', 'Living', 'Tower Defense Games', 'Card Games'],
-  motto: 'Res Non Verba',
-  color: 'crimson',
-}
 
-test('Should render the user profile', () => {
+test('Should test that Vonta is displayed', async () => {
+render(<Profile />)
 
+const name = await screen.getByText('Vonta');
 })
+
+test('Should test that the motto is displayed', async () => {
+  render(<Profile />)
+  
+  const motto = await screen.getByText('Res Non Verba');
+  })
+
+  test('Should test that interest heading is displayed', async () => {
+    render(<Profile />)
+    
+    const interestHeading= await screen.getByText('Interests');
+    })
+
+    test('Should test that the avatar is properly displayed', async () => {
+      render(<Profile />)
+      
+      const avatarAltText= await screen.getByAltText('avatar');
+      })
+
+      test('Should test that the header image is present', () => {
+        render(<Header />)
+        
+        const headerAltText =  screen.getByAltText('Alchemy Logo');
+        })
+
+        // test('Should return an index of 6 for the interests')
+        //   render(<Profile />)
+
+        //   const list = screen.getAllByRole('list')
+        // get by allbyrole list item
+        // findAllbyrole list item
+        // expect item.length to equal 6
+
+
