@@ -22,5 +22,4 @@ const Header = ({ user }) => {
     </header>
   )
 }
-
 export default Header
